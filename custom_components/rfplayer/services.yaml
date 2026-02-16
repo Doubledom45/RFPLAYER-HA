@@ -3,7 +3,7 @@ send_command:
   fields:
     command:
       name: Command
-      description: The command to be sent. [add Protocol]
+      description: La commande à envoyer. [add Protocol]
       required: true
       default: " " 
       example: "HELLO"
@@ -54,6 +54,7 @@ send_command:
               - LBT 16
               - FORMAT RFLINK OFF
               - FORMAT RFLINK BINARY
+              - PARROTLEARN
               - " "
           mode: dropdown
     protocol:
@@ -110,14 +111,14 @@ send_command:
         text:
     automatic_add:
       name: Create entity
-      description: Create associated switch entity
+      description: Creation associé switch entity
       required: true
       default: false
       selector:
         boolean:
     entity_type:
       name: Entity type
-      description: Type of entity created
+      description: Type d'entity création
       required: false
       default: switch
       selector:
@@ -130,22 +131,22 @@ send_command:
           mode: dropdown
 
 send_raw_command:
-  description: Send device raw command through RFPlayer.
+  description: Envoie une commande en Brut vers le RFPlayer.
   fields:
     command:
       name: Command
-      description: The command to be sent.
+      description: La command à envoyer précédé de ZIA++
       required: true
       example: "ZIA++STATUS JSON"
       selector:
         text:
 
 test_frame:
-  description: Test a frame inside RFPlayer.
+  description: Teste d'un log frame du RFPlayer.
   fields:
     frame:
       name: Frame
-      description: The frame to test.
+      description: Le log frame à tester.
       required: true
       example: 'ZIA33{ "frame" :{"header": {"frameType": "0", "cluster": "0", "dataFlag": "0", "rfLevel": "-91", "floorNoise": "-107", "rfQuality": "4", "protocol": "5", "protocolMeaning": "OREGON", "infoType": "4", "frequency": "433920"},"infos": {"subType": "0", "id_PHY": "0x1A2D", "id_PHYMeaning": "THGR122/228/238/268,THGN122/123/132", "adr_channel": "22274",  "adr": "87",  "channel": "2",  "qualifier": "33",  "lowBatt": "1", "measures" : [{"type" : "temperature", "value" : "+21.3", "unit" : "Celsius"}, {"type" : "hygrometry", "value" : "58", "unit" : "%"}]}}}'
       selector:
