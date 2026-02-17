@@ -3,10 +3,23 @@ name: Validate with hassfest
 on:
   push:
   pull_request:
+        branches:
+          - main
   schedule:
     - cron: "11 12 * * *"
 
 jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: PR Info
+        run: |
+          echo "PR Number: ${{ github.event.pull_request.number }}"
+          echo "PR Title: ${{ github.event.pull_request.title }}"
+          echo "PR Author: ${{ github.event.pull_request.user.login }}"
+          echo "Base Branch: ${{ github.base_ref }}"
+          echo "Head Branch: ${{ github.head_ref }}"
+          echo "Changed Files: ${{ github.event.pull_request.changed_files }}"
   validate:
     runs-on: "ubuntu-latest"
     steps:
