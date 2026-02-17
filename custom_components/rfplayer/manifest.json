@@ -2,7 +2,7 @@
   "domain": "rfplayer",
   "name": "RFPlayer HA_Dom",
   "codeowners": ["@Doubledom45"],
-  "single_config_flow": true,
+  "config_flow": true,
   "dependencies": [],
   "documentation": "https://github.com/Doubledom45/RFPLAYER-HA",
   "integration_type": "hub",
