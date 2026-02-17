@@ -1,6 +1,6 @@
 {
   "domain": "rfplayer",
-  "name": "RFPlayer HA",
+  "name": "RFPlayer HA@Dom",
   
   "codeowners": ["@Doubledom45"],
   "config_flow": true,
@@ -8,8 +8,8 @@
   "dependencies": [],
   "documentation": "https://github.com/Doubledom45/RFPLAYER-HA/tree/main/Information",
   
-  "issue_tracker": "https://github.com/Doubledom45/RFPLAYER-HA/issues",
   "iot_class": "assumed_state",
+  "issue_tracker": "https://github.com/Doubledom45/RFPLAYER-HA/issues",
    
   "requirements": ["pyserial==3.5", "pyserial-asyncio-fast"],
   
