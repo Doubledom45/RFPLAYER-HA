@@ -3,7 +3,6 @@
   "name": "RFPlayer HA_Dom",
   "codeowners": ["@Doubledom45"],
   "config_flow": true,
-  "dependencies": [],
   "documentation": "https://github.com/Doubledom45/RFPLAYER-HA",
   "integration_type": "hub",
   "iot_class": "assumed_state",
