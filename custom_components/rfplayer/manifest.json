@@ -1,6 +1,6 @@
 {
   "domain": "rfplayer",
-  "name": "RFPlayer HA@Dom",
+  "name": "RFPlayer HA_Dom",
   "codeowners": ["@Doubledom45"],
   "single_config_flow": true,
   "dependencies": [],
