@@ -32,5 +32,6 @@ jobs:
         uses: "hacs/action@main"
         with:
           category: "integration"
+          ignore: "brands"
       - name: "Checkout the repository"
         uses: "actions/checkout@v6"
