@@ -1,4 +1,7 @@
 # CHANGELOG
+## 2.3
+Test du mode PARROTLEARN
+AJOUT LOGO ET ICON PERSO
 ## 2.2
 Erreur de Fow lors de la 1ere initialisation
 ## 2.1
