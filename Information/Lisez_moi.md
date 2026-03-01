@@ -1,5 +1,5 @@
-# VERSION MODIFIER 2026.2
-[![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=Doubledom45&repository=RFPLAYER-HA&category=integration)
+# VERSION MODIFIER 2026.3
+[![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=Doubledom45&repository=HA-RFPLAYER-TEST&category=integration)
 
 <img width="1544" height="488" alt="image" src="https://github.com/user-attachments/assets/a34a61f5-1171-4dce-adf6-dc610933d8bf" />
 
@@ -12,7 +12,7 @@
 <img width="252" height="332" alt="image" src="https://github.com/user-attachments/assets/05d0cd35-5d29-4eb4-a22e-e80f06185003" />
 
 Dépots personalisés
-Avec le lien https://github.com/Doubledom45/RFPLAYER-HA
+Avec le lien https://github.com/Doubledom45/HA-RFPLAYER-TEST
 
 Catégorie 
 
@@ -131,4 +131,4 @@ data:
   custom_components.rfplayer: debug
 alias: Mode Debug
 ```
-[Voir l'Information Bouton log.md !](https://github.com/Doubledom45/RFPLAYER-HA/blob/main/Information/Bouton%20log.md)
+[Voir l'Information Bouton log.md !](https://github.com/Doubledom45/HA-RFPLAYER-TEST/blob/main/Information/Bouton%20log.md)
