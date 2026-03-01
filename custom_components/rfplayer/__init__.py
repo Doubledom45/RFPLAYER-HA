@@ -348,6 +348,7 @@ class RfplayerDevice(RestoreEntity):
         initial_event=None,
         name=None,
     ):
+
         """Initialize the device."""
         self._initial_event = initial_event
         self._protocol = protocol
