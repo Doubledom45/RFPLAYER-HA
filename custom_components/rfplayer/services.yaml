@@ -1,12 +1,57 @@
 send_command:
-  description: Send device command through RFPlayer.
+  description: Envoyer une commande à l'appareil via RFPlayer.
   fields:
+    protocol:
+      name: Protocol
+      description: RFPlayer compatible protocol.[parametre] 
+      
+                    📛PARROTLEARN [APPRENTISSAGE_PARROT]📛
+                    
+                    👉avec Adressse et possible Rappel (➕ commande ON/OFF)✅
+      required: true
+      default: " "
+      example: CHACON
+      selector:
+        select:
+          options:
+              - " "
+              - "BLYSS"
+              - "CHACON"
+              - "DOMIA"
+              - "EDISIO"
+              - "EDISIOFRAME"
+              - "FS20"
+              - "JAMMING"
+              - "JAMMING SIMULATE"
+              - "KD101"
+              - "OREGON"
+              - "OREGONV1"
+              - "OREGONV2"
+              - "OREGONV3/OWL"
+              - "OWL"
+              - "PARROT"
+              - "RTS"
+              - "TIC"
+              - "VISONIC"
+              - "VISONIC433"
+              - "VISONIC868"
+              - "X10"
+              - "X2D"
+              - "X2D433"
+              - "X2D868"
+              - "X2DELEC"
+              - "X2DGAS"
+              - "X2DSHUTTER"
+              - "APPRENTISSAGE_PARROT"
+              - " "
+          mode: dropdown
     command:
       name: Command
-      description: La commande à envoyer. [add Protocol]
+      description: La Commande à envoyer. [avec Protocol]
+                   
       required: true
       default: " " 
-      example: "HELLO"
+      example: "ON"
       selector:
         select:
           options:
@@ -54,45 +99,7 @@ send_command:
               - LBT 16
               - FORMAT RFLINK OFF
               - FORMAT RFLINK BINARY
-              - PARROTLEARN
-              - " "
-          mode: dropdown
-    protocol:
-      name: Protocol
-      description: RFPlayer compatible protocol.[parametre]
-      required: true
-      example: CHACON
-      selector:
-        select:
-          options:
-              - " "
-              - "BLYSS"
-              - "CHACON"
-              - "DOMIA"
-              - "EDISIO"
-              - "EDISIOFRAME"
-              - "FS20"
-              - "JAMMING"
-              - "JAMMING SIMULATE"
-              - "KD101"
-              - "OREGON"
-              - "OREGONV1"
-              - "OREGONV2"
-              - "OREGONV3/OWL"
-              - "OWL"
-              - "PARROT"
-              - "RTS"
-              - "TIC"
-              - "VISONIC"
-              - "VISONIC433"
-              - "VISONIC868"
-              - "X10"
-              - "X2D"
-              - "X2D433"
-              - "X2D868"
-              - "X2DELEC"
-              - "X2DGAS"
-              - "X2DSHUTTER"
+              - STATUS PARROT XML
               - " "
           mode: dropdown
     device_address:
@@ -104,23 +111,25 @@ send_command:
         text:
     device_id:
       name: Device ID ou Cde EDISIOFRAME
-      description: Ou  % du DIM
+      description: Ou  % du DIM, peut-être une info supplémentaire [ ] <- pour Parrot rappel
       required: false
       example: 40
       selector:
         text:
     automatic_add:
-      name: Create entity
-      description: Creation associé switch entity
-      required: true
+      name: Creation entity
+      description: Création avec le type d'entité sélectionnée
+      required: false
       default: false
+      example: false
       selector:
         boolean:
     entity_type:
       name: Entity type
-      description: Type d'entity création
+      description: Type de l'entitée pour création
       required: false
       default: switch
+      example: switch
       selector:
         select:
           options:
@@ -131,22 +140,23 @@ send_command:
           mode: dropdown
 
 send_raw_command:
-  description: Envoie une commande en Brut vers le RFPlayer.
+  description: Send device raw command through RFPlayer.
   fields:
     command:
       name: Command
-      description: La command à envoyer précédé de ZIA++
+      description: The command to be sent. Ref API
       required: true
+      default: ZIA++
       example: "ZIA++STATUS JSON"
       selector:
         text:
 
 test_frame:
-  description: Teste d'un log frame du RFPlayer.
+  description: Test a frame inside RFPlayer.
   fields:
     frame:
       name: Frame
-      description: Le log frame à tester.
+      description: The frame to test.
       required: true
       example: 'ZIA33{ "frame" :{"header": {"frameType": "0", "cluster": "0", "dataFlag": "0", "rfLevel": "-91", "floorNoise": "-107", "rfQuality": "4", "protocol": "5", "protocolMeaning": "OREGON", "infoType": "4", "frequency": "433920"},"infos": {"subType": "0", "id_PHY": "0x1A2D", "id_PHYMeaning": "THGR122/228/238/268,THGN122/123/132", "adr_channel": "22274",  "adr": "87",  "channel": "2",  "qualifier": "33",  "lowBatt": "1", "measures" : [{"type" : "temperature", "value" : "+21.3", "unit" : "Celsius"}, {"type" : "hygrometry", "value" : "58", "unit" : "%"}]}}}'
       selector:
